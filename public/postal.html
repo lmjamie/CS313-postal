@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Postal Rate Calculator</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+  <script src="/js/onReady.js"></script>
+</head>
+<body>
+  <div class="row container center">
+    <div class="col s12">
+      <h2>Postal Calculator</h2>
+    </div>
+  </div>
+  <div class="row">
+    <form action="/calc" method="GET" class="col s6 offset-s3">
+      <div class="row">
+        <div class="input-field col s10 offset-s1">
+          <input type="number" min="0" step="any" name="weight" id="weight" required>
+          <label for="weight">Weight (Oz.)</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s10 offset-s1">
+          <select name="type" id="type">
+            <option value="stamped">Letters (Stamped)</option>
+            <option value="metered">Letters (Metered)</option>
+            <option value="flat">Large Envelopes (Flats)</option>
+            <option value="parcel">Parcels</option>
+          </select>
+          <label for="type">Postage Type</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6 offset-s4">
+          <button class="btn green waves-effect waves-dark" type="submit">Calculate
+            <i class="material-icons right">mail_outline</i>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

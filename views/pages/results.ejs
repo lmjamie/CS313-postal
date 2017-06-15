@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Postage Price</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+</head>
+<body>
+
+  <div class="row container">
+    <div class="col s10 offset-s1 m6 offset-m3 l4 offset-l4">
+      <div class="card blue-grey">
+        <div class="card-content green-text text-lighten-5">
+          <span class="card-title">Postage Price</span>
+          <p>Type: <%= type %></p>
+          <p>Weight: <%= weight + " Oz." %></p>
+          <p>Price: <%= price %></p>
+        </div>
+        <div class="card-action center">
+          <a href="/postal.html" class="btn green lighten-2 wave-effects waves-purple">
+            Again<i class="material-icons right">refresh</i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
