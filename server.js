@@ -7,7 +7,7 @@ app.set("views", __dirname + "/views");
 app.set("view engine", "ejs");
 
 app.get("/", function (request, response) {
-  response.redirect("/postal.html");
+  response.sendFile(__dirname + "/public/postal.html");
 });
 
 app.get("/calc", function (request, response) {
